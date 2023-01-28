@@ -1,10 +1,10 @@
 import {observable} from 'mobx';
 
 const store = observable({
-    count: 0,
-    calcCount(){
-        this.count = this.count+1
-    }
+    list: [],
+    arrayList(a){
+       this.list.push(a)
+    },
 })
 
 export default store;
