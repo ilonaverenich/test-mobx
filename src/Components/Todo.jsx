@@ -25,7 +25,7 @@ function Todo() {
       <button onClick={()=>clickBtn()}>Добавить</button>
       {errors?<p>Вы не ввели значение</p>:''}
       <ul>
-       {store.list && store.list.map((item,id)=><li id={id}>{item} </li>)}
+       {store.list && store.list.map((item,id)=><div><li id={id}>{item} </li><button onClick={()=>store.deleteItem(item)}>X</button></div>)}
       </ul>   
     </div>
   )
